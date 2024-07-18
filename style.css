@@ -1,0 +1,238 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+   
+}
+html{
+    scroll-behavior: smooth;
+}
+#container{
+    width: 100%;
+    height: 100vh;
+    position: relative;/* contents will be placed relative to its div tag */
+}
+#navbar{
+    display: flex;/* to place child emelents in inline */
+    width: 85%;
+    margin-left: 100px;
+    justify-content:space-between;/* applies space b/w child contents inside parent */
+    align-items: center;/* to align child contents vertically */
+}
+#logo{
+    width: 130px;
+}
+.listItem{
+    list-style: none; /* remove styling of item */
+    display:inline;
+    margin: 10px 20px;
+    font-weight: 700;/* to increase boldness */
+    
+}
+a{
+    text-decoration: none;/* removes underlines */
+    color: black;
+}
+li a:hover{
+    color: red;
+    
+}
+#lastname{
+    color: gold;
+}
+#title{
+    margin-top: 13%;
+    margin-left: 8%;
+    font-size: 28px;
+}
+#title h1{
+    margin-bottom: 30px;
+}
+#title a{
+    background-color: black;
+    color:white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+#images{
+    width: 45%;
+    height: 80%;
+    position: absolute;/*this position will be relative to parent position ie. relative to #container*/
+    right: 30px;
+    bottom: 0px;
+}
+
+.imageGroup{
+    position: absolute;
+    height: 100%;
+    bottom:0px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 2s;
+}
+
+#images:hover #shape{
+    bottom:70px;
+}
+#images:hover #girl{
+    left:40%;
+}
+
+/* section 2: About me */
+
+#about{
+    margin-left: 8% ;
+    margin-top: 14%;
+    margin-right: 8%;
+    
+}
+.heading{
+    text-align: center;
+}
+.heading h2{
+    font-size: 35px;
+}
+.heading p{
+    font-size: 20px;
+    color: green;
+}
+#content{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;/* related to html font size */
+    margin-top: 2rem;
+}
+#content_img{
+    width: 80%;
+}
+#content_details{
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 400;
+}
+#information{
+    margin-top: 2rem;
+}
+.info{
+    margin-top: 1rem;
+}
+.info span{
+    margin-left: 1rem;
+}
+
+/* skill section */
+
+#skill{
+    margin: 8% 8% 0 8%;
+}
+#skill_container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+#skill_img img{
+    width: 90%;
+}
+.bar_container{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+    position: relative;
+}
+.bar_container span{
+    font-size: 20px;
+    font-weight: 800;
+}
+.bar{
+    width: 90%;
+    height: 0.5rem;
+    background-color: black;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+}
+#html_bar{
+    width: 85%;
+    background-color:orange;
+}
+#css_bar{
+    width: 79%;
+    background-color:orange;
+}
+#js_bar{
+    width: 81%;
+    background-color:orange;
+}
+#react_bar{
+    width: 84%;
+    background-color:orange;
+}
+#contact{
+    margin-top: 8%;
+    margin-bottom: 100px;
+}
+.icon_set{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    
+    
+}
+.icon,.up_arrow{
+    /* border: 1px solid red; */
+    width: 62px;
+    height: 62px;
+    margin: 0px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+   
+}
+.icon i{
+    color: black;
+}
+.icon :hover i{
+    color: white;
+} 
+.icon :hover{
+    background-image: linear-gradient(to top left,rgb(255, 157, 0),yellow);
+    /* transform: scale(1.0); */
+    /* transition: .5s; */
+    animation: shake 0.75s;
+}
+@keyframes shake{
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-15deg);
+    }
+
+}
+footer{
+    text-align: center;
+    margin: 2.5rem 0px;
+}
+footer p{
+    font-size: 17px;
+    font-weight: 600;
+    
+
+}
+.up_arrow{
+    background-image: linear-gradient(to top left,yellow,orange);
+    float: right;
+    margin: 0px 50px 50px 0px;
+}
